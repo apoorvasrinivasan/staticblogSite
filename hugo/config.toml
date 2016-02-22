@@ -1,6 +1,6 @@
-BaseUrl= "http://myblog.com/"
+BaseUrl= "http://localhost:1313"
 LanguageCode= "en-US"
-Title= "My blog"
+Title= "Because.. It's Physics"
 paginate = 5
 DisqusShortname = "YOUR_SHORT_NAME_HERE"
 Copyright = "All rights reserved - 2016"
@@ -10,7 +10,7 @@ theme="book"
 
 
 [params]
-  description = "this is my description"
+  description = "In the end.. it is all physics"
   cover = "images/a.jpg"
   author = "charizard42"
   authorlocation = "india"
