@@ -1,4 +1,9 @@
-
+@font-face {
+    font-family: "Operator A";
+    font-style: normal;
+    font-weight: 400;
+    src: url(operator.woff);
+}
 body{background-color: #f6f6f6;}
 .header {
   background: #fff none repeat scroll 0 0;
@@ -157,12 +162,6 @@ article.card img {
 
 
 
-.container{
-    width: 400px;
-    margin: 0 auto;
-padding: 10px;
-font-size: 16px;
-}
 
 
 @media screen and (max-width: 400px) {
@@ -172,10 +171,5 @@ font-size: 16px;
     width:auto;
     border:2px dashed #ccc;  
   }
-.container{
-    width: 100%;
-    margin: 0 auto;
-
-}
 
 }

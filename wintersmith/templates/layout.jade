@@ -15,7 +15,6 @@ html(lang='en')
 
       //link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.css'].url)
-      link(rel='stylesheet', href=contents.css['custom.css'].url)
       block top_scripts
   body(class=bodyclass)
     block header
@@ -24,12 +23,12 @@ html(lang='en')
           img(src=locals.logo)
     block beforeContent
 
-    div#content
-      div.content-wrap
+
+    div.container
         block content
           
     footer
-      div.content-wrap
+      div.container
         block footer
           section.about
             !=contents['about.md'].html

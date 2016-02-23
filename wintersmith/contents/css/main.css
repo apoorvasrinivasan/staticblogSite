@@ -18,7 +18,7 @@ body {
 }
 a{color: #3D96D6; text-decoration: none;}
 a:hover{color: #2B6F9F;}
-.content-wrap {
+.container {
   width: 960px;
   margin: 0 auto;
   padding-top: 2em;
@@ -387,3 +387,31 @@ code.lang-markdown .bullet {
   color: #8959a8;
 }
 
+
+
+@media screen and (max-width: 960px){
+  
+.container{
+    width: 700px;
+    margin: 0 auto;
+padding: 10px;
+font-size: 16px;
+}
+}
+@media screen and (max-width: 700px){
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+padding: 10px;
+font-size: 16px;
+}
+}
+
+@media screen and (max-width: 400px) {
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+
+}
