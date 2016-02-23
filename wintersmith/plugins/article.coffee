@@ -13,7 +13,6 @@ module.exports = (env, callback) ->
     # helper that returns a list of articles found in the contents folder
     # note that each article is assumed to have its own directory in the articles directory
     articles = contents[options.articles]._.directories.map (item) -> item.index
-    console.log articles
     articles = articles.filter (i)->  return i.metadata.draft isnt true
     articles.sort (a, b) -> b.date - a.date
     

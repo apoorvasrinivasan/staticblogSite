@@ -17,8 +17,8 @@ block content
             a(href=article.url)= article.title
           p.date= moment.utc(article.date).format('DD. MMMM YYYY')
         section.content
-          if article.metadata.image
-            img.artcile-image(src=article.url + article.metadata.image)
+          if article.metadata.banner
+            img.artcile-image(src=article.url + article.metadata.banner)
           if article.intro.length > 0
             != typogr(article.intro).typogrify()
         if article.hasMore
