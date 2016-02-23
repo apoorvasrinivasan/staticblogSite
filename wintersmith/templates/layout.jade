@@ -18,9 +18,8 @@ html(lang='en')
       link(rel='stylesheet', href=contents.css['custom.css'].url)
       block top_scripts
   body(class=bodyclass)
-
-    header.header
-      block header
+    block header
+      header.header
         div.logo
           img(src=locals.logo)
     block beforeContent
@@ -35,7 +34,6 @@ html(lang='en')
           section.about
             !=contents['about.md'].html
           section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+            p &copy; #{ new Date().getFullYear() } #{ locals.owner } 
               //- please leave the "powered by" if you use the design
     block bottom_scripts

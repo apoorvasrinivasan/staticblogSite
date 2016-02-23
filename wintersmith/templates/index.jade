@@ -1,5 +1,5 @@
-
 extends layout
+block header
 
 block beforeContent
   div(style="background-image: url(#{locals.featured_image})",class='featured-image')
@@ -10,19 +10,19 @@ block content
   div.article-list
     include author
     each article in articles
-      if !article.metadata.draft
-        article.article.intro
-          header
-            p.date
-              span= moment.utc(article.date).format('DD. MMMM YYYY')
-            h2
-              a(href=article.url)= article.title
-          section.content
-            if article.intro.length > 0
-              != typogr(article.intro).typogrify()
-            if article.hasMore
-              p.more
-                a(href=article.url) more
+      
+      article.card
+        header
+          h2
+            a(href=article.url)= article.title
+          p.date= moment.utc(article.date).format('DD. MMMM YYYY')
+        section.content
+          if article.metadata.image
+            img.artcile-image(src=article.url + article.metadata.image)
+          if article.intro.length > 0
+            != typogr(article.intro).typogrify()
+        if article.hasMore
+            a.more(href=article.url) Continue Reading
     block prepend 
       div.nav
 

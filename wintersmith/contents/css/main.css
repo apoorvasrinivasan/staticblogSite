@@ -2,18 +2,26 @@
 h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
   margin: 0; padding: 0; border: 0;
 }
-
+@font-face {
+    font-family: "Proxima";
+     src: url("../fonts/Proxima Nova Alt Regular.otf") format('opentype');
+}
 body {
-  font-family: 'Lora', serif;
-  font-size: 21px;
+  font-family: 'Proxima', sans-serif;
+  font-size: 12px;
   line-height: 1.52;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
+  padding: 0;
+  margin: 0;
+  color: #171717;
   text-rendering: optimizeLegibility;
 }
-
+a{color: #3D96D6; text-decoration: none;}
+a:hover{color: #2B6F9F;}
 .content-wrap {
-  width: 34em;
+  width: 960px;
   margin: 0 auto;
+  padding-top: 2em;
 }
 .clear{
   clear: both;
@@ -23,14 +31,7 @@ body {
   content: "";
 }
 
-body, a {
-  color: #171717;
-}
-
-a:hover {
-  color: #ff8000;
-  text-decoration: underline;
-}
+li a{ color: inherit;display: block;height: 100%; padding: 5px;}
 
 p {
   margin-bottom: 1.52em;
@@ -203,6 +204,9 @@ footer .copy, footer .copy a {
   text-align: center;
   font-size: 0.8em;
   margin-top: -0.7em;
+  color: #DB5B43;
+  font-size: .8em;
+
 }
 
 .article header .date span {
@@ -225,14 +229,7 @@ footer .copy, footer .copy a {
   width: 100%;
 }
 
-.more, .date {
-  font-family: 'Merriweather', serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  font-weight: 400;
-  text-rendering: auto;
-  letter-spacing: 1px;
-}
+
 
 /* archive */
 
@@ -297,6 +294,13 @@ footer .copy, footer .copy a {
   margin: 0;
 }
 
+.card {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #ccc;
+    padding: 1em;
+    margin:1em auto;
+  }
 /* code styling */
 
 code {
@@ -383,60 +387,3 @@ code.lang-markdown .bullet {
   color: #8959a8;
 }
 
-/* media queries */
-
-@media (min-width: 1600px) {
-  body { font-size: 26px; }
-}
-
-@media (max-width: 900px) {
-  body { font-size: 18px; }
-}
-
-@media (max-width: 690px) {
-  .content-wrap {
-    width: auto;
-    padding: 0 1em;
-  }
-  .header {
-    margin: 1em 0;
-  }
-  .header h1 {
-    font-size: 1.4em;
-    margin-bottom: 0.6em;
-  }
-  .header .description {
-    font-size: 1em;
-  }
-  .article {
-    margin: 1em 0 2.5em;
-  }
-  .archive {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .archive * {
-    float: none !important;
-    line-height: 1.6 !important;
-    width: auto !important;
-    height: auto !important;
-    text-align: left !important;
-    border: 0 !important;
-    margin: 0 !important;
-  }
-  footer .nav {
-    margin: 1em 0;
-  }
-  footer .about {
-    padding: 0;
-    font-size: 0.9em;
-    padding-top: 1.6em;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -ms-column-count: 1;
-    column-count: 1;
-  }
-  footer .about p {
-    margin-bottom: 1em;
-  }
-}

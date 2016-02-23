@@ -8,3 +8,4 @@ deploy:
 	git commit -m "Deploy"; \
 	git push "git@github.com:{YOUR NAME}/{YOUR REPO}.git" master:gh-pages --force && \
 	rm -rf .git
+  echo "http://cozitsphysics.com/SSG_blog" 
