@@ -7,15 +7,16 @@ block append vars
 block prepend title
   | #{ page.title + ' - '}
 
-block header
-  include author
-  h1= page.title
-  p.author
-    | #{ 'Written by ' }
-    mixin author(page.metadata.author)
+
+include author
   
 
 block content
+  p.author
+    | #{ 'Written by ' }
+    mixin author(page.metadata.author)
+  p.date= moment.utc(page.date).format('DD. MMMM YYYY')
+  h1= page.title
   article.article
     section.content!= typogr(page.html).typogrify()
 

@@ -4,11 +4,23 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 }
 @font-face {
     font-family: "Proxima";
-     src: url("../fonts/Proxima Nova Alt Regular.otf") format('opentype');
+     src: url("Proxima Nova Condensed Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: "Operator A";
+    font-style: normal;
+    font-weight: 400;
+    src: url("operator.woff")  format('woff');
+}
+@font-face {
+    font-family: "ideal_sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("ideal_sans.woff")  format('woff');
 }
 body {
   font-family: 'Proxima', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.52;
   background-color: #f6f6f6;
   padding: 0;
@@ -16,6 +28,8 @@ body {
   color: #171717;
   text-rendering: optimizeLegibility;
 }
+body{background-color: #f6f6f6;}
+body.article-detail{background-color: #fff;}
 a{color: #3D96D6; text-decoration: none;}
 a:hover{color: #2B6F9F;}
 .container {
@@ -50,6 +64,7 @@ pre {
 h1 {
   font-size: 2em;
   margin-bottom: 1em;
+  font-family: "Operator A";
 }
 
 h2 {
@@ -91,49 +106,26 @@ hr {
 
 /* page header */
 
+
+
+
 .header {
-  margin: 3em 0 5em;
-}
-
-.header h1 {
-  font-size: 2.6em;
-  text-align: center;
-  font-weight: 700;
+  background: #fff none repeat scroll 0 0;
+  height: 50px;
   margin: 0;
+  padding: 5px;
+}
+.logo {height: 100%;}
+.logo img{max-height: 100%;}
+.featured-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.header a, .header a:hover {
-  text-decoration: none;
-  color: #171717;
-}
 
-.header .author {
-  font-family: 'Merriweather', serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  text-rendering: auto;
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-.header .description {
-  font-size: 1.2em;
-  font-style: italic;
-  text-align: center;
-  margin-top: -0.3em;
-}
-
-body.article-detail > header h1 {
-  font-size: 2.5em;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: -0.2em;
-}
-
-body.article-detail > header {
-  margin-bottom: 3em;
-}
+.article-detail h1{ font-size: 2.5em;}
+.article-detail header{ border-bottom: 1px solid #ccc; margin-bottom: 10px;}
 
 /* page footer */
 
