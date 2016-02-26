@@ -60,6 +60,10 @@ h1 {
     font-size: 12px;
     padding: 5px 10px;
 }
+.article-head {
+    text-align: left;
+    font-size: 1.4em;
+}
 
 @media screen and (max-width: 700px){
   .article-list {
