@@ -1,6 +1,9 @@
 
 extends layout
 
+block top_scripts
+  link(rel='stylesheet', href=contents.css['custom.css'].url)
+
 block append vars
   - bodyclass = 'article-detail'
 
@@ -9,10 +12,12 @@ block prepend title
 
 block header
   include author
-  h1= page.title
-  p.author
-    | #{ 'Written by ' }
-    mixin author(page.metadata.author)
+  div.class
+    div.content
+      h2= page.title
+        p.author
+          | #{ 'Written by ' }
+          mixin author(page.metadata.author)
   
 
 block content

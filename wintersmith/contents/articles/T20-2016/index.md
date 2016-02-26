@@ -10,7 +10,7 @@ template: article.jade
 ** T20 2016 **
 
 Suresh Raina produced an innings of great composure to help India to a thrilling last-ball victory over Australia in the third and final T20 International match. Raina smashed a 25-ball-49, never once appearing flustered, as India chased down a total of 197 at the SCG to sweep the KFC T20 series 3-0.
-<span class="more"></span>
+
 
 The match was not about just a win or a sweet for India. It was full of nail biting moments that kept viewers at the edge of their seat! Each team member did their bit and they did it the best!
 
