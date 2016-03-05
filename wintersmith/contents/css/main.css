@@ -4,13 +4,13 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 }
 @font-face {
     font-family: "Proxima";
-     src: url("Proxima Nova Condensed Regular.otf") format('opentype');
+     src: url("Proxima Nova Alt Regular.otf") format('opentype');
 }
 @font-face {
     font-family: "Operator A";
     font-style: normal;
-    font-weight: 400;
-    src: url("operator.woff")  format('woff');
+    font-weight: 400
+;    src: url("operator.woff")  format('woff');
 }
 @font-face {
     font-family: "ideal_sans";
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 }
 body {
   font-family: 'Proxima', sans-serif;
-  font-size: 16px;
+  font-size: 1p6x;
   line-height: 1.52;
   background-color: #f6f6f6;
   padding: 0;
@@ -64,7 +64,7 @@ pre {
 h1 {
   font-size: 2em;
   margin-bottom: 1em;
-  font-family: "Operator A";
+  /*font-family: "Operator A";*/
 }
 
 h2 {
