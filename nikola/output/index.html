@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://apoorvasrinivasan.com/">
+<meta name="description" content="because.. i Can">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog</title>
+<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="assets/css/semantic.min.css" rel="stylesheet" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<!--  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300"
+              rel="stylesheet" type="text/css"> -->
+<link rel="canonical" href="http://apoorvasrinivasan.com/">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/welcome-to-nikola/" type="text/html">
+</head>
+<body>
+
+
+<div class="scrollme">
+<header class="fixed">
+	<div class="header-container">
+	<h1>Apoorva Srinivasan</h1>
+<!-- 	<ul  class="">
+		<li class=" massive circular red label  ui">Work</li>
+		<li class=" massive circular blue label  ui">Twitter</li>
+		<li class=" massive circular green label  ui">Facebook</li>
+		<li class=" massive circular purple label  ui">Pintrest</li>
+	</ul>  -->   
+	</div>
+</header>
+
+<section id="about" style="margin-top:2rem">
+	<div class="ui container grid">
+	<div class="ui rounded image four wide column teal "><img src = "assets/images/solo.jpg" /></div>
+	<div class="two wide column"></div>
+	<div class="ten wide column">
+	<p>
+		Hi! <br/>
+		I am Apoorva Srinivasan.<br/> 
+		blah blah blha is a;; i can say about myself.
+		<br/>
+		<br/>
+	</p>
+	</div>
+	</div>
+</section>
+</div>
+<section class="twitter">
+	<a class="twitter-timeline" href="https://twitter.com/ApoorvaShrini">Tweets by ApoorvaShrini</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+<section>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+<div class="scrollme">
+    <div
+        class="animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0"
+        data-opacity="0"
+        data-translatex="-200"
+        data-rotatez="90"
+    >
+        Yup, that's all.
+    </div>
+</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</section>
+<footer class="spread">
+	<a target = '_blank' href = "http://apoorvasrinivasan.com/resume">Hire_Me</a>
+	<a target = '_blank' href = "http://twitter.com/apoorvaShrini"><i class="icon black large twitter"></i></a>
+	<a target = '_blank' href = "http://facebook.com/apoorva.srinivasan1"><i class="icon black large facebook"></i></a>
+	<a target = '_blank' href = "https://in.pinterest.com/ascoolasapoorva/"><i class="icon black large pinterest"></i></a>
+	<a target = '_blank' href = "https://www.instagram.com/apoorvaShrini"><i class="icon black large instagram"></i></a>
+	<a target = '_blank' href = "https://telegram.me/apoorvaShrini"><i class="icon black large whatsapp"></i></a>
+	<a target = '_blank' href = "https://telegram.me/apoorvaShrini"><i class="icon black large soundcloud"></i></a>
+	  
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src = "assets/js/scrollme.js"></script>
+<script type="text/javascript">
+	var Scroll = {
+		lastScrollTop : 0,
+		perFrame:500,
+		actionDictionary:{},
+		getDirection:function(){
+			var st = $(window).scrollTop();
+			
+			var llt = this.lastScrollTop;
+			this.lastScrollTop = st;
+			if(st >= llt){
+				//SCROLL DOWN
+				return 1
+			}
+			else
+				return -1;
+		},
+		totalFrames : function(){
+			return parseInt(window.scrollMaxY / this.perFrame);
+		},
+		currentFrame:function(){
+			var currentScroll = window.scrollY;
+			return parseInt(currentScroll/this.perFrame);
+
+		},
+		setItem:function(start, duration, func, reverse){
+			this.actionDictionary[start] = {'func':func}
+			this.actionDictionary[start + duration] = {'func':reverse}
+		},
+		executeItem:function(e){
+			var start = this.currentFrame();
+			var item = this.actionDictionary[start];
+			if (item)
+				item.func(e);
+		},
+		init:function(){
+			var self = this;
+			window.onscroll = function(e){
+				// smartscroll(e);
+				// console.log()
+				// console.log(self.getDirection());
+				// self.executeItem(e)
+
+			}
+		},
+	}
+
+		
+window.onscroll = function(){
+	var scrollDist = 500;
+	var height = 530 - 70;
+	var scrolled = (window.scrollY-  Scroll.lastScrollTop );
+	var dir = Scroll.getDirection();
+	scrolled  = scrolled * dir	
+	var height_perScroll = height/scrollDist;
+	// console.log(height_perScroll)
+		var h = $('header').height();
+		// console.log(h);
+	if(dir >0){
+		//Down
+		if(window.scrollY >scrollDist) return
+		if(h <= 70) return;
+		$('header').height(h-(height_perScroll * scrolled));
+	}
+	else{
+		if(window.scrollY >=scrollDist) return
+		console.log()
+		if(h >= 530) return;
+		$('header').height(h+(height_perScroll* scrolled));
+	}
+}	
+ // Scroll.init()
+		// Scroll.setItem(0, 5 ,function(){
+		// 	$('header').height(70)
+		// },function(){
+		// 	$('header').height(530)
+		// })
+</script>
+</body>
+</html>
