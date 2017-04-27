@@ -1,17 +1,15 @@
 {
   "locals": {
-    "url": "http://localhost:8080/",
-    "name": "My sports Destination",
+    "url": "http://localhost:8080",
+    "name": "Sports Blog",
     "owner": "Apoorva",
     "description": "Sports Article",
     "logo":"http://i.kinja-img.com/gawker-media/image/upload/s--7dyXeQ3b--/17mcvv099jo1ipng.png",
     "featured_image":"https://static.wixstatic.com/media/20adf4_79e069a6137d422a8ba595ee8b68c85c.jpg/v1/crop/w_980,h_360,al_t,q_85/60adf4_79e069a6137d422a8ba595ee8b68c85c.jpg"
   },
-  "baseUrl":"/SSG_blog",
   "plugins": [
     "./plugins/paginator.coffee",
-    "./plugins/helper.coffee",
-    "./plugins/article.coffee"
+    "./plugins/helper.coffee"
   ],
   "require": {
     "moment": "moment",
@@ -26,7 +24,7 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 2
+    "perPage": 3
   },
   "tags": [
        {

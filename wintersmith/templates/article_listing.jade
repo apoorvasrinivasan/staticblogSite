@@ -1,0 +1,41 @@
+extends layout
+block header
+block top_scripts
+  link(rel='stylesheet', href=contents.css['custom.css'].url)
+block content
+
+
+  - var articles = env.helpers.getList(contents);
+  section
+    each article in articles
+        article.article.intro.card
+
+          .container(style='background-color: #fff;')
+           
+          
+            .headline-card.tracked.loaded(style='height: 210px;')
+              a.image-wrap(href='#')
+                if article.metadata.banner
+                  img.image.image-small(src=article.url +article.metadata.banner)
+             
+            .body
+              h3
+                a(href=article.url)= article.title
+
+            .news-info
+                 
+                span.time
+                  i.fa.fa-calendar.fa-1x
+                  span= moment.utc(article.date).format('DD. MMMM YYYY')
+
+                span.time
+                    
+                  a(href=article.url)= article.author
+            .text-preview
+              p
+                a(href='#')
+                  if article.intro.length > 0
+              != typogr(article.intro).typogrify()
+block footer                
+             
+              
