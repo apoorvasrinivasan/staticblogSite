@@ -1,0 +1,61 @@
+<label> Enter an item <input type="text" class="todo" placeholder = "enter an item" onChange="addTodo(this)"> </label>
+  
+<ul id = "TodoList">
+
+</ul> 
+
+<script type="text/javascript">
+	
+
+var addTodo = function (el) {
+
+  // get the value of the input
+  var todoValue = el.value;
+  el.value = '';
+
+  // get the UL element
+  var ul = document.getElementById("TodoList");
+
+  // create a list item
+  var li = document.createElement("li");
+  li.innerHTML = todoValue;
+  
+  
+  // add the checkbox
+  input = document.createElement("input");
+  input.type='checkbox';
+  input.addEventListener('change',changeStatus);
+  li.appendChild(input);
+
+  // append to the ul
+  ul.appendChild(li);
+};
+
+ 
+
+
+var changeStatus = function(){
+   
+   // get the list item that triggered this event.
+   el = event.target;
+   var checked = el.checked;
+  
+  // get the parent li element
+  var li = el.parentElement;
+  // if the checkbox is checked
+   if(checked)
+     li.setAttribute('data-status','done');
+  else
+    li.setAttribute('data-status','tbd');
+  
+ }
+
+</script>
+<style type="text/css">
+	
+	#TodoList li[data-status="done"] {
+	    color: grey;
+	    font-style: italic;
+	    text-decoration: line-through;
+	}
+</style>

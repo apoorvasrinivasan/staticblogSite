@@ -1,4 +1,0 @@
-Sitemap: http://apoorvasrinivasan.com/sitemapindex.xml
-
-User-Agent: *
-Host: apoorvasrinivasan.com
