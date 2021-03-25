@@ -1,11 +1,18 @@
-<label> Enter an item <input type="text" class="todo" placeholder = "enter an item" onChange="addTodo(this)"> </label>
-  
-<ul id = "TodoList">
+<html>
+<head>
+    <title> Todo list - using plain javascript</title>
+</head>
+<body>
+    <div class="content">
+        <label> Enter an item <input type="text" class="todo" placeholder = "enter an item" onChange="addTodo(this)"> </label>
+          
+        <ul id = "TodoList">
 
-</ul> 
+        </ul> 
+</div>
 
 <script type="text/javascript">
-	
+    
 
 var addTodo = function (el) {
 
@@ -18,7 +25,14 @@ var addTodo = function (el) {
 
   // create a list item
   var li = document.createElement("li");
+  var span = document.createElement("span");
   li.innerHTML = todoValue;
+
+  // to remove the li element
+  li.appendChild(span);
+  span.addEventListener('click',function(){
+    li.remove();
+  });
   
   
   // add the checkbox
@@ -52,10 +66,54 @@ var changeStatus = function(){
 
 </script>
 <style type="text/css">
-	
-	#TodoList li[data-status="done"] {
-	    color: grey;
-	    font-style: italic;
-	    text-decoration: line-through;
-	}
+    body {
+        font-size: 18px;
+        font-family: verdana, sans-serif;
+    }
+    .content {
+        width: 700px;
+        max-width: 90%;
+        margin: 40px auto;
+    }
+    input.todo {
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 0 0 1px 2px #ccc;
+        text-transform: capitalize;
+    }
+    input[type="checkbox"] {
+        float: left;
+        margin-right: 14px;
+    }
+    li {
+        list-style: none;
+        padding: 8px 20px;
+        border-bottom: 1px solid #ccc;
+        box-shadow: 0 0 3px #ccc;
+        border-radius: 3px;
+        margin-top: 17px;
+        position: relative;
+    }
+    li span:after{
+        content: "x";
+    }
+    li span{
+        position: absolute;
+        right: 18px;
+        color: maroon;
+        font-size: 12px;
+    }
+    #TodoList{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #TodoList li[data-status="done"] {
+        color: grey;
+        font-style: italic;
+        text-decoration: line-through;
+        order:-1;
+    }
 </style>
+</body>
+</html>
